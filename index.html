@@ -1,10 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-<title>AI課程測試</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI高效人才培訓計畫｜AI工作效率實戰班</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;background:#f7f8fb;color:#172033;line-height:1.8}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    .hero{background:linear-gradient(135deg,#07111f,#111827 55%,#c2410c);color:white;padding:72px 0 56px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center}
+    .tag{display:inline-block;background:#c2410c;padding:6px 14px;border-radius:999px;font-size:14px;font-weight:700;margin-bottom:18px}
+    h1{font-size:48px;line-height:1.22;margin-bottom:18px}
+    .subtitle{font-size:21px;color:#d8dee9;margin-bottom:28px}
+    .hero-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:22px;box-shadow:0 25px 80px rgba(0,0,0,.28)}
+    .hero-card img{width:100%;border-radius:18px;display:block}
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:25px}
+    .btn{background:#c2410c;color:white;padding:14px 24px;border-radius:10px;font-weight:800;display:inline-block}
+    .btn.secondary{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+    .stat{background:rgba(255,255,255,.08);padding:16px;border-radius:16px}
+    .stat b{font-size:28px;color:#ffb27b;display:block}
+    section{padding:72px 0}
+    .title{text-align:center;margin-bottom:42px}
+    .title h2{font-size:34px;color:#0f172a;margin-bottom:8px}
+    .title p{color:#64748b;font-size:18px}
+    .pain-grid,.skill-grid,.take-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:white;border:1px solid #e5e7eb;border-radius:22px;padding:26px;box-shadow:0 10px 28px rgba(15,23,42,.06)}
+    .card .icon{font-size:36px;margin-bottom:12px}
+    .card h3{font-size:22px;margin-bottom:10px;color:#111827}
+    .card p{color:#5b6475}
+    .dark{background:#0f172a;color:white}
+    .dark .title h2{color:white}
+    .dark .title p{color:#cbd5e1}
+    .skill{background:#121c2f;border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:26px}
+    .skill span{display:inline-block;color:#ffb27b;font-weight:900;margin-bottom:10px}
+    .skill h3{font-size:22px;margin-bottom:12px}
+    .skill ul{padding-left:20px;color:#dbe3ef}
+    .visual{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+    .visual img{width:100%;border-radius:24px;box-shadow:0 20px 50px rgba(15,23,42,.18)}
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{background:white;border-radius:20px;padding:22px;text-align:center;border:1px solid #e5e7eb}
+    .step b{display:block;font-size:28px;color:#c2410c}
+    .instructor{background:white;border-radius:28px;padding:34px;display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:center;box-shadow:0 14px 40px rgba(15,23,42,.08)}
+    .avatar{height:220px;border-radius:24px;background:linear-gradient(135deg,#0f172a,#c2410c);display:flex;align-items:center;justify-content:center;color:white;font-size:72px}
+    details{background:white;border:1px solid #e5e7eb;border-radius:16px;padding:18px 22px;margin-bottom:12px}
+    summary{font-weight:800;cursor:pointer;color:#111827}
+    .final-cta{text-align:center;background:linear-gradient(135deg,#0f172a,#1e293b);color:white;padding:72px 20px}
+    .final-cta h2{font-size:36px;margin-bottom:16px}
+    .price{font-size:34px;color:#ffb27b;font-weight:900;margin:20px 0}
+    footer{text-align:center;padding:28px;color:#64748b;background:#eef2f7}
+    @media(max-width:900px){
+      .hero-grid,.visual,.instructor{grid-template-columns:1fr}
+      h1{font-size:34px}
+      .subtitle{font-size:18px}
+      .stats,.pain-grid,.skill-grid,.take-grid,.flow{grid-template-columns:1fr}
+      section{padding:52px 0}
+      .title h2{font-size:28px}
+    }
+  </style>
 </head>
 <body>
-<h1>AI高效人才培訓計畫</h1>
-<p>網站測試成功</p>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">2026 AI高效人才培訓計畫</span>
+      <h1>AI工作效率實戰班<br>從不會用AI，到每天省下2小時</h1>
+      <p class="subtitle">不是單純教 ChatGPT，而是帶你把 AI 用在文書、簡報、報告、會議、業務話術與日常工作流程。</p>
+      <div class="cta-row">
+        <a href="#course" class="btn">查看課程內容</a>
+        <a href="#signup" class="btn secondary">我要報名/洽詢</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>6hr</b>實體實作課</div>
+        <div class="stat"><b>100+</b>Prompt模板</div>
+        <div class="stat"><b>0基礎</b>也能上手</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80" alt="AI課程主視覺">
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>你不是不會工作，是還沒把AI放進工作流程</h2>
+      <p>很多人已經聽過AI，但真正會用AI完成工作的人，仍然很少。</p>
+    </div>
+    <div class="pain-grid">
+      <div class="card"><div class="icon">📝</div><h3>文書寫很慢</h3><p>Email、公文、會議紀錄、工作日誌，每天都在重複整理。</p></div>
+      <div class="card"><div class="icon">📊</div><h3>報告做很久</h3><p>資料很多，但不知道怎麼整理成主管看得懂的重點。</p></div>
+      <div class="card"><div class="icon">💬</div><h3>AI問不出好答案</h3><p>不是AI不好用，而是問題沒有定義清楚，指令沒有結構。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="course">
+  <div class="container">
+    <div class="title">
+      <h2>六大實戰技能</h2>
+      <p>每個單元都不是聽觀念，而是現場操作、直接帶走。</p>
+    </div>
+    <div class="skill-grid">
+      <div class="skill"><span>SKILL 01</span><h3>AI工具地圖</h3><ul><li>ChatGPT / Gemini / Claude差異</li><li>什麼任務該用什麼工具</li><li>AI使用安全觀念</li></ul></div>
+      <div class="skill"><span>SKILL 02</span><h3>Prompt指令公式</h3><ul><li>角色設定</li><li>任務拆解</li><li>輸出格式控制</li></ul></div>
+      <div class="skill"><span>SKILL 03</span><h3>AI文書處理</h3><ul><li>Email回覆</li><li>會議紀錄</li><li>SOP整理</li></ul></div>
+      <div class="skill"><span>SKILL 04</span><h3>AI簡報製作</h3><ul><li>簡報架構</li><li>課程大綱</li><li>提案文案</li></ul></div>
+      <div class="skill"><span>SKILL 05</span><h3>AI資料分析</h3><ul><li>表格摘要</li><li>KPI分析</li><li>異常判斷</li></ul></div>
+      <div class="skill"><span>SKILL 06</span><h3>AI工作流程</h3><ul><li>把重複任務模板化</li><li>建立自己的AI工作手冊</li><li>回公司可直接套用</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container visual">
+    <div>
+      <div class="title" style="text-align:left;margin-bottom:22px">
+        <h2>課堂不是看老師表演，而是你自己做出成果</h2>
+        <p>老師示範 → 學員同步操作 → 範本套用 → 成果檢核。</p>
+      </div>
+      <div class="flow">
+        <div class="step"><b>1</b>Demo</div>
+        <div class="step"><b>2</b>操作</div>
+        <div class="step"><b>3</b>套用</div>
+        <div class="step"><b>4</b>帶走</div>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="課程實作畫面">
+  </div>
+</section>
+
+<section style="background:#f1f5f9">
+  <div class="container">
+    <div class="title">
+      <h2>上完課，你會直接帶走這些工具</h2>
+      <p>不是只有筆記，而是可以回公司馬上用的工作底稿。</p>
+    </div>
+    <div class="take-grid">
+      <div class="card"><div class="icon">🎁</div><h3>Prompt工具包</h3><p>文書、簡報、報告、會議、管理常用指令。</p></div>
+      <div class="card"><div class="icon">📄</div><h3>文書模板</h3><p>Email、會議紀錄、工作日誌、SOP整理模板。</p></div>
+      <div class="card"><div class="icon">📈</div><h3>報告模板</h3><p>讓AI協助你把資料整理成主管看得懂的報告。</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container visual">
+    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" alt="學員討論畫面">
+    <div>
+      <div class="title" style="text-align:left;margin-bottom:22px">
+        <h2>適合誰來上？</h2>
+      </div>
+      <div class="card">
+        <p>✅ 行政、秘書、業務、主管、教育訓練人員</p>
+        <p>✅ 想提升文書、簡報、報告效率的人</p>
+        <p>✅ 想學AI，但不想只聽工具介紹的人</p>
+        <p>✅ 想把AI導入日常工作流程的團隊</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="container">
+    <div class="instructor">
+      <div class="avatar">AI</div>
+      <div>
+        <h2 style="color:#0f172a">講師介紹</h2>
+        <p style="color:#475569">由具備第一線管理、教育訓練與AI實務應用經驗的講師授課。課程重點不是炫技，而是把AI變成每個人都能使用的工作方法。</p>
+        <p style="color:#475569;margin-top:12px">擅長將複雜工作拆解成流程、表單、模板與Prompt，協助學員快速從「聽過AI」進步到「真的會用AI完成工作」。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>常見問題</h2>
+    </div>
+    <details><summary>完全不會AI可以上嗎？</summary><p>可以。本課程從基礎開始，重點是實作與套用，不需要工程背景。</p></details>
+    <details><summary>需要自備電腦嗎？</summary><p>建議自備筆電，才能同步操作並完成自己的成果。</p></details>
+    <details><summary>課後會有資料嗎？</summary><p>會提供Prompt、模板與課後練習方向，方便回公司繼續使用。</p></details>
+    <details><summary>這堂課和一般ChatGPT課有什麼不同？</summary><p>一般課程教工具，本課程教你把AI放進工作流程，做出文書、簡報、報告與管理成果。</p></details>
+  </div>
+</section>
+
+<section class="final-cta" id="signup">
+  <h2>現在開始，把AI變成你的工作助理</h2>
+  <p>給自己6小時，換回每天更快、更清楚、更有系統的工作方式。</p>
+  <div class="price">課程洽詢 / 企業內訓 / 團體包班</div>
+  <a href="#" class="btn">我要學AI</a>
+</section>
+
+<footer>
+  AI高效人才培訓計畫｜AI工作效率實戰班
+</footer>
+
 </body>
 </html>
