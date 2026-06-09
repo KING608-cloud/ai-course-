@@ -37,7 +37,7 @@
     .dark .title p{color:#cbd5e1}
     .skill{background:#121c2f;border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:26px}
     .skill span{display:inline-block;color:#ffb27b;font-weight:900;margin-bottom:10px}
-    .skill h3{font-size:22px;margin-bottom:12px}
+    .skill h3{font-size:22px;margin-bottom:12px;color:white}
     .skill ul{padding-left:20px;color:#dbe3ef;font-size:15px}
     .skill ul li{margin-bottom:6px}
     .visual{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
@@ -45,9 +45,279 @@
     .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .step{background:white;border-radius:20px;padding:22px;text-align:center;border:1px solid #e5e7eb}
     .step b{display:block;font-size:28px;color:#c2410c}
-    .instructor{background:white;border-radius:28px;padding:34px;display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:center;box-shadow:0 14px 40px rgba(15,23,42,.08)}
-    .avatar{height:220px;border-radius:24px;background:linear-gradient(135deg,#0f172a,#c2410c);display:flex;align-items:center;justify-content:center;color:white;font-size:72px}
+    
+    /* 修正後的講師區塊樣式，確保在深色背景下文字全部變白 */
+    .instructor{background:#1e293b;border:1px solid rgba(255,255,255,0.1);border-radius:28px;padding:34px;display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:center;box-shadow:0 14px 40px rgba(0,0,0,0.15)}
+    .avatar{height:220px;border-radius:24px;background:linear-gradient(135deg,#334155,#c2410c);display:flex;align-items:center;justify-content:center;color:white;font-size:72px}
+    .instructor h2{color:#ffffff !important; margin-bottom:12px;}
+    .instructor p{color:#cbd5e1 !important; font-size:16px;}
+    
     details{background:white;border:1px solid #e5e7eb;border-radius:16px;padding:18px 22px;margin-bottom:12px}
     summary{font-weight:800;cursor:pointer;color:#111827}
     details p{margin-top:10px;color:#475569}
-    .final-cta
+    .final-cta{text-align:center;background:linear-gradient(135deg,#0f172a,#1e293b);color:white;padding:72px 20px}
+    .final-cta h2{font-size:36px;margin-bottom:16px}
+    .price{font-size:34px;color:#ffb27b;font-weight:900;margin:20px 0}
+    footer{text-align:center;padding:28px;color:#64748b;background:#eef2f7}
+    @media(max-width:900px){
+      .hero-grid,.visual,.instructor{grid-template-columns:1fr}
+      h1{font-size:32px}
+      .subtitle{font-size:16px}
+      .stats,.pain-grid,.skill-grid,.take-grid,.flow{grid-template-columns:1fr}
+      section{padding:52px 0}
+      .title h2{font-size:28px}
+      .avatar{height:160px;font-size:54px}
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">2026 AI高效人才培訓計畫</span>
+      <h1>AI工作效率實戰班<br>從 0 開始，用 AI 每天幫你省下 2 小時</h1>
+      <p class="subtitle">這不是一堂教你背指令的「軟體操作課」，而是一堂帶你將 ChatGPT、Gemini、Claude 完美嵌入公文、簡報、會議與數據分析的<b>職場生存加速器</b>。</p>
+      <div class="cta-row">
+        <a href="#course" class="btn">搶先查看實戰單元</a>
+        <a href="#signup" class="btn secondary">企業內訓 / 立即報名</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>6小時</b>實體密集實作</div>
+        <div class="stat"><b>100+</b>商務 Prompt 範本</div>
+        <div class="stat"><b>0 基礎</b>白話文教學</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80" alt="AI課程主視覺">
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>别讓重複的庶務，吃掉你的下班時間！</h2>
+      <p>很多人天天都在用 AI，但卻只把它當成好玩的聊天機器人...</p>
+    </div>
+    <div class="pain-grid">
+      <div class="card">
+        <div class="icon">❌</div>
+        <h3>傳統的工作模式</h3>
+        <p style="margin-bottom:8px"><b>Email 寫到心累：</b>面對客訴或催款信，對著空白視窗發呆 20 分鐘。</p>
+        <p><b>聽寫式的會議紀錄：</b>開會 1 小時，會後要花 2 小時整理逐字稿與交辦事項。</p>
+      </div>
+      <div class="card">
+        <div class="icon">✨</div>
+        <h3>AI 解放後的效率</h3>
+        <p style="margin-bottom:8px"><b>30 秒產出專業回信：</b>輸入核心關鍵字，AI 自動生成得體、商務感十足的郵件。</p>
+        <p><b>5秒提煉會議結論：</b>丟入錄音檔，精準提取「決議事項」與「追蹤負責人」。</p>
+      </div>
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>為什麼你問不出好答案？</h3>
+        <p>不是 AI 不好用，而是你還在用「請幫我寫一封信」等模糊提問。本課程將傳授萬用指令公式，讓 AI 越問越聰明，不再吐出敷衍的廢話。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="course">
+  <div class="container">
+    <div class="title">
+      <h2>六大全面擴充實戰技能</h2>
+      <p>拒絕純理論！每個單元均配有職場真實情境，現場直接產出成果。</p>
+    </div>
+    <div class="skill-grid">
+      <div class="skill">
+        <span>SKILL 01</span>
+        <h3>三大 AI 工具盲測與安全觀念</h3>
+        <ul>
+          <li>實測 ChatGPT、Gemini、Claude 核心強項</li>
+          <li>依據不同工作任務，精準挑選最適合的工具</li>
+          <li>企業資訊安全防護線：聰明使用不洩密</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <span>SKILL 02</span>
+        <h3>獨家黃金 Prompt 指令公式</h3>
+        <ul>
+          <li>萬用架構：【角色設定 + 任務拆解 + 脈絡限制】</li>
+          <li>多輪對話引導法，逐步校正出 100% 準確答案</li>
+          <li>現場實作：打造你專屬的終極指令集</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <span>SKILL 03</span>
+        <h3>高階文書與行政流程自動化</h3>
+        <ul>
+          <li>商務書信流：客訴回覆、跨部門協調、催款信</li>
+          <li>行政管理流：口頭交辦快速整理成標準 SOP</li>
+          <li>會議流：雜亂逐字稿的高效清理與重點摘要</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <span>SKILL 04</span>
+        <h3>結構化簡報與提案文案流</h3>
+        <ul>
+          <li>運用 AI 進行「麥肯錫式」邏輯思維拆解</li>
+          <li>從目標、痛點到解決方案，10 分鐘寫好黃金大綱</li>
+          <li>快速生成吸引目光的業務話術與提案企劃</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <span>SKILL 05</span>
+        <h3>免寫程式的 AI 數據與 KPI 分析</h3>
+        <ul>
+          <li>把 AI 當成你的專屬數據特助，直接丟入 Excel</li>
+          <li>自動抓出「業績異常原因」與「潛在虧損漏洞」</li>
+          <li>提煉核心洞察，生成主管一眼看懂的一頁紙報告</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <span>SKILL 06</span>
+        <h3>打造個人的「AI 數位大腦」</h3>
+        <ul>
+          <li>將課堂所學指令打包成一鍵啟動的重複模板</li>
+          <li>建立客製化的 AI 工作手冊，帶回公司直接套用</li>
+          <li>正式告別無效加班，換取更多彈性下班時間</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container visual">
+    <div>
+      <div class="title" style="text-align:left;margin-bottom:22px">
+        <h2>課堂不是看老師表演，而是你自己做出成果</h2>
+        <p>實體課程的最大價值在於「即時修正」。我們採取四步循環教學，確保你每一步都跟得上、練得會。</p>
+      </div>
+      <div class="flow">
+        <div class="step"><b>1</b>Demo 示範</div>
+        <div class="step"><b>2</b>學員操作</div>
+        <div class="step"><b>3</b>範本套用</div>
+        <div class="step"><b>4</b>檢核帶走</div>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="課程實作畫面">
+  </div>
+</section>
+
+<section style="background:#f1f5f9">
+  <div class="container">
+    <div class="title">
+      <h2>走出教室，你將直接帶走豪華實戰大禮包</h2>
+      <p>不是只有空洞的筆記，而是明天回公司上班就能複製貼上的武器。</p>
+    </div>
+    <div class="take-grid">
+      <div class="card">
+        <div class="icon">🎁</div>
+        <h3>萬用 Prompt 神兵利器包</h3>
+        <p>收錄 100+ 個經過職場反覆驗證、絕不碰壁的精準指令，涵蓋文書、簡報、數據分析與管理情境。</p>
+      </div>
+      <div class="card">
+        <div class="icon">📄</div>
+        <h3>高效辦公自動化模板庫</h3>
+        <p>包含高情商商務書信架構、SOP 生成框架、簡報黃金結構表，讓日常庶務全面進入半自動化。</p>
+      </div>
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>一頁紙報告與數據分析底稿</h3>
+        <p>提供現成的數據對話模型框架，協助你將密密麻麻的 Excel 資料，快速轉化為邏輯嚴密的決策建議。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>學員好評推薦</h2>
+      <p>來看看不同職場領域的學員，如何透過 AI 改變他們的工作型態</p>
+    </div>
+    <div class="pain-grid">
+      <div class="card">
+        <p style="font-style:italic; color:#475569">「以前開完週會，我要花整個禮拜五下午在聽錄音檔做會議紀錄。上完課後，我用老師教的指令，10分鐘就產出主管讚不絕口的精準紀錄，終於可以準時下班了！」</p>
+        <h4 style="margin-top:14px; color:#111827">－ 陳小姐（知名外商 執行秘書）</h4>
+      </div>
+      <div class="card">
+        <p style="font-style:italic; color:#475569">「以前想提案大綱都要想破頭，現在我知道怎麼跟 AI 『協同創作』。提案產出速度快了3倍，而且邏輯更嚴密，客戶聽完提案的買單率明顯提升！」</p>
+        <h4 style="margin-top:14px; color:#111827">－ 張先生（品牌行銷主管）</h4>
+      </div>
+      <div class="card">
+        <p style="font-style:italic; color:#475569">「本來很擔心自己連關鍵字都不會打，但老師的公式非常簡單直覺。現在面對跨部門的大量 Excel 數據，我可以直接請 AI 當特助幫我抓出盲點，超有成就感！」</p>
+        <h4 style="margin-top:14px; color:#111827">－ 李先生（傳統製造業 專案經理）</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container visual">
+    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" alt="學員討論畫面">
+    <div>
+      <div class="title" style="text-align:left;margin-bottom:22px">
+        <h2>這堂課適合誰來上？</h2>
+      </div>
+      <div class="card">
+        <p style="margin-bottom:8px">✅ <b>行政秘書 / 總務人員：</b>想從無盡的會議紀錄與庶務郵件中解脫的人。</p>
+        <p style="margin-bottom:8px">✅ <b>業務 / 行銷專才：</b>每天需要產出大量提案、行銷文案、業務開發信的人。</p>
+        <p style="margin-bottom:8px">✅ <b>管理職 / 中階主管：</b>需要看大量報告，想利用 AI 快速抓出重點與數據漏洞的人。</p>
+        <p>✅ <b>科技麻瓜 / 0基礎新手：</b>想學 AI，但不想只聽複雜的技術原理，只想知道「怎麼幫我省時間」的人。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="container">
+    <div class="instructor">
+      <div class="avatar">AI</div>
+      <div>
+        <h2>講師介紹</h2>
+        <p>由具備第一線管理、教育訓練與 AI 實務應用經驗的專家親自授課。課程重點<b>絕不炫技</b>，不教寫程式、不教複雜代碼，只專注在把 AI 變成每個人都能立刻上手的工作習慣。</p>
+        <p style="margin-top:12px;">擅長將複雜、繁瑣的職場工作拆解成標準流程（SOP）、系統表單與高效 Prompt，至今已協助數百位學員成功跨越科技門檻，從「聽過 AI」真正躍升為「用 AI 提早下班」的高效人才。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>常見問題 FAQ</h2>
+    </div>
+    <details>
+      <summary>完全不會 AI，平常也很少用 ChatGPT 可以上嗎？</summary>
+      <p>完全沒問題！本課程就是為了「科技麻瓜」量身打造的。我們會從最直覺的白話文交談開始，循序漸進帶你掌握結構化指令，只要你會打字，就一定學得會。</p>
+    </details>
+    <details>
+      <summary>這堂課需要自費升級 ChatGPT Plus (GPT-4) 才能上嗎？</summary>
+      <p>不需要。課程中會同時兼顧「免費版」與「付費版」的操作技巧，並教你如何截長補短，善用免費工具的組合拳也能達到極高的高效產出。</p>
+    </details>
+    <details>
+      <summary>上課需要自己帶電腦嗎？</summary>
+      <p>是的。這是一堂 100% 強調現場產出的實作課，請務必攜帶筆記型電腦（Windows 或 Mac 皆可）及電源線，才能在現場跟著步驟完成自己的工作底稿。</p>
+    </details>
+    <details>
+      <summary>這堂課和一般網路上看影片、或坊間的 ChatGPT 課有什麼不同？</summary>
+      <p>網路影片大多只教工具功能介紹（例如：怎麼畫畫、怎麼寫簡單代碼）。而本課程是<b>「職場情境導向」</b>，直接切入文書、簡報、報告與會議紀錄四大核心，教你如何無縫融入你現有的工作流程中。</p>
+    </details>
+  </div>
+</section>
+
+<section class="final-cta" id="signup">
+  <h2>現在開始，把 AI 變成你的專屬核心助理</h2>
+  <p style="font-size:18px; margin-top:10px; color:#cbd5e1">給自己 6 小時的投資，換回每天更快、更清楚、更有系統的高效職場人生。</p>
+  <div class="price">每班僅限 30 人額滿即止</div>
+  <a href="#" class="btn" style="font-size:18px; padding:16px 36px;">課程洽詢 / 企業內訓 / 立即搶位</a>
+</section>
+
+<footer>
+  AI高效人才培訓計畫｜AI工作效率實戰班
+</footer>
+
+</body>
+</html>
